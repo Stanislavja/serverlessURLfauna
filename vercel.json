@@ -1,0 +1,8 @@
+{
+  "env": {
+    "david": "dotdev"
+  },
+    "routes": [
+      { "src": "^/?[^/]*$", "dest": "/api/redirect.js" }
+  ]
+}

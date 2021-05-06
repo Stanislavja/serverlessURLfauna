@@ -1,0 +1,4 @@
+.now
+.env
+*.swp
+node_modules

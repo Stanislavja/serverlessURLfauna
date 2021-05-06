@@ -1,0 +1,19 @@
+{
+  "name": "serverless-url",
+  "version": "1.0.0",
+  "dependencies": {
+    "faunadb": "^4.2.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bendechrai/url-shortener.git"
+  },
+  "author": "gurugeek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bendechrai/url-shortener/issues"
+  },
+  "homepage": "https://github.com/bendechrai/url-shortener#readme"
+}
