@@ -11,7 +11,7 @@ const Redirect = async (userRequest, userResponse) => {
   const shortcode = userRequest.url.replace("/", "") || "__default__";
   const client = new faunadb.Client({ secret: faunadb_secret });
 
-  userResponse.send(faunadb_secret);
+  userResponse.send(shortcode);
   const redirectInfo = await client
     .query(q.Paginate(q.Match(q.Ref("indexes/redirect"), shortcode)))
     .then(response => {
