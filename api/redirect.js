@@ -11,7 +11,6 @@ const Redirect = async (userRequest, userResponse) => {
   const shortcode = userRequest.url.replace("/", "") || "__default__";
   const client = new faunadb.Client({ secret: faunadb_secret });
 
-  userResponse.send(shortcode);
   const redirectInfo = await client
     .query(q.Paginate(q.Match(q.Ref("indexes/redirect"), shortcode)))
     .then(response => {
@@ -22,6 +21,8 @@ const Redirect = async (userRequest, userResponse) => {
       return client.query(getAllRedirectDataQuery);
     })
     .catch(error => userResponse.send("Not found"));
+
+  userResponse.send(redirectInfo);
 
   if (redirectInfo.length != 1 || !redirectInfo[0].data.dest) {
     // Too much, not enough, or invalid data
