@@ -12,7 +12,7 @@ const Redirect = async (userRequest, userResponse) => {
   const client = new faunadb.Client({ secret: faunadb_secret });
 
   const redirectInfo = await client
-    .query(q.Paginate(q.Match(q.Ref("indexes/redirect"), shortcode)))
+    .query(q.Paginate(q.Match(q.Ref("indexes/test"), shortcode)))
     .then(response => {
       const redirectRefs = response.data;
       const getAllRedirectDataQuery = redirectRefs.map(ref => {
