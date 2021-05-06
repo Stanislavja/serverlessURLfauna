@@ -22,7 +22,7 @@ const Redirect = async (userRequest, userResponse) => {
     })
     .catch(error => userResponse.send("Not found"));
 
-  userResponse.send(redirectInfo);
+  userResponse.send(JSON.stringify(redirectInfo));
 
   if (redirectInfo.length != 1 || !redirectInfo[0].data.dest) {
     // Too much, not enough, or invalid data
