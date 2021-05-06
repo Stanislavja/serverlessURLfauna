@@ -8,12 +8,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bendechrai/url-shortener.git"
+    "url": "git+https://github.com/gurugeek/serverlessURLfauna.git"
   },
   "author": "gurugeek",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bendechrai/url-shortener/issues"
+    "url": "https://github.com/gurugeek/serverlessURLfauna/issues"
   },
-  "homepage": "https://github.com/bendechrai/url-shortener#readme"
+  "homepage": "https://github.com/gurugeek/serverlessURLfauna#readme"
 }
